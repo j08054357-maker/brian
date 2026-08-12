@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Customer Support</title>
 
     <link rel="icon" type="image/png" href="qbinc.png">
@@ -23,13 +24,14 @@
         }
 
         .support-card {
+            width: 100%;
             max-width: 450px;
             margin: 40px auto;
             background: #ffffff;
             border: 2px solid #2ca01c;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
             text-align: center;
         }
 
@@ -47,46 +49,56 @@
 
         .card-body h3 {
             font-size: 18px;
-            color: #111;
+            color: #111111;
             margin-bottom: 20px;
             font-weight: 700;
         }
 
         .card-body p {
             font-size: 15px;
-            color: #444;
+            color: #444444;
             line-height: 1.6;
             margin-bottom: 30px;
         }
 
         .phone-num {
             font-weight: 700;
-            color: #111;
+            color: #111111;
+            white-space: nowrap;
         }
 
+        /* Talk to Agent */
         .talk-btn {
+            display: inline-block;
             background-color: #2ca01c;
             color: #ffffff;
             border: 2px solid #1c6d12;
-            padding: 12px 30px;
+            padding: 13px 32px;
             font-size: 16px;
             font-weight: 700;
             border-radius: 8px;
             cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+            transition: background-color 0.2s ease,
+                        transform 0.1s ease;
         }
 
         .talk-btn:hover {
             background-color: #248216;
         }
 
+        .talk-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Footer */
         .card-footer {
             padding: 15px 20px;
             background-color: #f9fbf9;
             border-top: 1px solid #eef2ee;
             font-size: 13px;
-            color: #666;
+            color: #666666;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -101,6 +113,20 @@
 
         .call-link:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
+            }
+
+            .support-card {
+                margin: 20px auto;
+            }
+
+            .card-body {
+                padding: 25px 20px;
+            }
         }
     </style>
 </head>
@@ -124,62 +150,33 @@
                 <span class="phone-num">(615) 288-5665</span>.
             </p>
 
-            <button class="talk-btn" onclick="startTawkChat()">
+            <!-- CLICKING THIS OPENS PHONE DIALER -->
+            <a
+                href="tel:+16152885665"
+                class="talk-btn"
+            >
                 Talk to Agent
-            </button>
+            </a>
 
         </div>
 
         <div class="card-footer">
+
             📞
-            <a class="call-link" href="tel:+16152885665">
+
+            <a
+                href="tel:+16152885665"
+                class="call-link"
+            >
                 Click here to call (615) 288-5665
             </a>
+
         </div>
 
     </div>
 
-
-    <!-- Tawk.to -->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {};
-        var Tawk_LoadStart = new Date();
-
-        (function () {
-            var s1 = document.createElement("script");
-            var s0 = document.getElementsByTagName("script")[0];
-
-            s1.async = true;
-            s1.src = "https://embed.tawk.to/6a7a87a80ef5611d48e8fbd8/default";
-            s1.charset = "UTF-8";
-            s1.setAttribute("crossorigin", "*");
-
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-
-
-        function startTawkChat() {
-
-            if (typeof Tawk_API !== "undefined") {
-
-                if (typeof Tawk_API.showWidget === "function") {
-                    Tawk_API.showWidget();
-                }
-
-                if (typeof Tawk_API.maximize === "function") {
-                    Tawk_API.maximize();
-                }
-
-            } else {
-
-                window.Tawk_API = window.Tawk_API || {};
-
-                Tawk_API.onLoad = function () {
-                    if (typeof Tawk_API.maximize === "function") {
-                        Tawk_API.maximize();
-                    }
-                };
-            }
+</body>
+</html>
         }
     </script>
 
