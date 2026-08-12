@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intuit Support</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="qbinc.png">
 
@@ -13,7 +13,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
@@ -91,7 +92,7 @@
             background-color: #248216;
         }
 
-        /* Footer Note inside card */
+        /* Footer Note */
         .card-footer {
             padding: 15px 20px;
             background-color: #f9fbf9;
@@ -105,54 +106,135 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Intuit Support Card -->
     <div class="support-card">
+
         <div class="card-header">
             Intuit Support
         </div>
 
         <div class="card-body">
-            <h3>Thank you for chatting with Intuit Support.</h3>
+
+            <h3>
+                Thank you for chatting with Intuit Support.
+            </h3>
+
             <p>
-                Got it &mdash; thanks for the message! A member of our team will follow up shortly. You can also call us anytime at <span class="phone-num">(615) 288-5665</span>.
+                Got it &mdash; thanks for the message! A member of our team
+                will follow up shortly. You can also call us anytime at
+                <span class="phone-num">(615) 288-5665</span>.
             </p>
 
-            <button class="talk-btn" onclick="startTawkChat()">Talk to Agent</button>
+            <button class="talk-btn" onclick="startTawkChat()">
+                Talk to Agent
+            </button>
+
         </div>
 
         <div class="card-footer">
             💬 Click at the bottom right-hand corner to chat with a live human.
         </div>
+
     </div>
 
-    <!-- On-Click Tawk.to Trigger Script -->
-    <script type="text/javascript">
-    function startTawkChat() {
-        // Agar script pehle se loaded hai toh direct chat window open karega
-        if (typeof Tawk_API !== 'undefined' && Tawk_API.maximize) {
-            Tawk_API.showWidget();
-            Tawk_API.maximize();
-            return;
-        }
 
-        // Script load hone ke baad chat auto-open hone ke liye callback
-        window.Tawk_API = window.Tawk_API || {};
-        window.Tawk_LoadStart = new Date();
-        
-        Tawk_API.onLoad = function() {
-            Tawk_API.maximize();
+    <!-- =========================================
+         TAWK.TO CHAT SCRIPT
+         ========================================= -->
+
+    <script type="text/javascript">
+
+        var Tawk_API = Tawk_API || {};
+        var Tawk_LoadStart = new Date();
+
+        (function () {
+            var s1 = document.createElement("script");
+            var s0 = document.getElementsByTagName("script")[0];
+
+            s1.async = true;
+
+            s1.src =
+                "https://embed.tawk.to/6a7a87a80ef5611d48e8fbd8/default";
+
+            s1.charset = "UTF-8";
+            s1.setAttribute("crossorigin", "*");
+
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+
+
+        /*
+         * When Tawk.to finishes loading,
+         * keep the widget ready.
+         */
+        Tawk_API.onLoad = function () {
+
+            console.log("Tawk.to chat loaded");
+
         };
 
-        // Dynamically injecting Tawk.to Script on click
-        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = 'https://embed.tawk.to/6a7645c9c400c51d45ded95d/1jvf017ir';
-        s1.charset = 'UTF-8';
-        s1.setAttribute('crossorigin', '*');
-        s0.parentNode.insertBefore(s1, s0);
-    }
+
+        /*
+         * TALK TO AGENT BUTTON
+         *
+         * Clicking the button will:
+         * 1. Show the Tawk widget
+         * 2. Open/maximize the chat window
+         */
+        function startTawkChat() {
+
+            if (
+                typeof Tawk_API !== "undefined" &&
+                typeof Tawk_API.showWidget === "function" &&
+                typeof Tawk_API.maximize === "function"
+            ) {
+
+                Tawk_API.showWidget();
+                Tawk_API.maximize();
+
+            } else {
+
+                /*
+                 * If Tawk is still loading,
+                 * wait and then automatically open it.
+                 */
+                Tawk_API = Tawk_API || {};
+
+                Tawk_API.onLoad = function () {
+
+                    if (typeof Tawk_API.showWidget === "function") {
+                        Tawk_API.showWidget();
+                    }
+
+                    if (typeof Tawk_API.maximize === "function") {
+                        Tawk_API.maximize();
+                    }
+
+                };
+
+                /*
+                 * Try again shortly in case
+                 * the script is still initializing.
+                 */
+                setTimeout(function () {
+
+                    if (
+                        typeof Tawk_API !== "undefined" &&
+                        typeof Tawk_API.maximize === "function"
+                    ) {
+
+                        Tawk_API.showWidget();
+                        Tawk_API.maximize();
+
+                    }
+
+                }, 1000);
+            }
+        }
+
     </script>
 
 </body>
