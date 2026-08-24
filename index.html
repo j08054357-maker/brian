@@ -1,241 +1,1929 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intuit Support</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="qbinc.png">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f8faf8;
-            color: #333;
-            padding: 20px;
-        }
-
-        .subject-text {
-            font-size: 16px;
-            color: #111;
-            margin-bottom: 40px;
-        }
-
-        /* Card Container */
-        .support-card {
-            max-width: 450px;
-            margin: 0 auto;
-            background: #ffffff;
-            border: 2px solid #2ca01c;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-
-        /* Green Header */
-        .card-header {
-            background-color: #2ca01c;
-            color: #ffffff;
-            padding: 18px 20px;
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        /* Card Body */
-        .card-body {
-            padding: 30px 25px;
-        }
-
-        .card-body h3 {
-            font-size: 18px;
-            color: #111;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .card-body p {
-            font-size: 15px;
-            color: #444;
-            line-height: 1.5;
-            margin-bottom: 30px;
-        }
-
-        .phone-num {
-            font-weight: 700;
-            color: #111;
-        }
-
-        /* Talk to Agent Button */
-        .talk-btn {
-            background-color: #2ca01c;
-            color: #ffffff;
-            border: 2px solid #1c6d12;
-            padding: 12px 30px;
-            font-size: 16px;
-            font-weight: 700;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .talk-btn:hover {
-            background-color: #248216;
-        }
-
-        /* Footer Note */
-        .card-footer {
-            padding: 15px 20px;
-            background-color: #f9fbf9;
-            border-top: 1px solid #eef2ee;
-            font-size: 13px;
-            color: #666;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- Intuit Support Card -->
-    <div class="support-card">
-
-        <div class="card-header">
-            Intuit Support
-        </div>
-
-        <div class="card-body">
-
-            <h3>
-                Thank you for chatting with Intuit Support.
-            </h3>
-
-            <p>
-                Got it &mdash; thanks for the message! A member of our team
-                will follow up shortly. You can also call us anytime at
-                <span class="phone-num">(615) 288-5665</span>.
-            </p>
-
-            <button class="talk-btn" onclick="startTawkChat()">
-                Talk to Agent
-            </button>
-
-        </div>
-
-        <div class="card-footer">
-            💬 Click at the bottom right-hand corner to chat with a live human.
-        </div>
-
-    </div>
-
-
-    <!-- =========================================
-         TAWK.TO CHAT SCRIPT
-         ========================================= -->
-
-    <script type="text/javascript">
-
-        var Tawk_API = Tawk_API || {};
-        var Tawk_LoadStart = new Date();
-
-        (function () {
-            var s1 = document.createElement("script");
-            var s0 = document.getElementsByTagName("script")[0];
-
-            s1.async = true;
-
-            s1.src =
-                "https://embed.tawk.to/6a7a87a80ef5611d48e8fbd8/default";
-
-            s1.charset = "UTF-8";
-            s1.setAttribute("crossorigin", "*");
-
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-
-
-        /*
-         * When Tawk.to finishes loading,
-         * keep the widget ready.
-         */
-        Tawk_API.onLoad = function () {
-
-            console.log("Tawk.to chat loaded");
-
-        };
-
-
-        /*
-         * TALK TO AGENT BUTTON
-         *
-         * Clicking the button will:
-         * 1. Show the Tawk widget
-         * 2. Open/maximize the chat window
-         */
-        function startTawkChat() {
-
-            if (
-                typeof Tawk_API !== "undefined" &&
-                typeof Tawk_API.showWidget === "function" &&
-                typeof Tawk_API.maximize === "function"
-            ) {
-
-                Tawk_API.showWidget();
-                Tawk_API.maximize();
-
-            } else {
-
-                /*
-                 * If Tawk is still loading,
-                 * wait and then automatically open it.
-                 */
-                Tawk_API = Tawk_API || {};
-
-                Tawk_API.onLoad = function () {
-
-                    if (typeof Tawk_API.showWidget === "function") {
-                        Tawk_API.showWidget();
-                    }
-
-                    if (typeof Tawk_API.maximize === "function") {
-                        Tawk_API.maximize();
-                    }
-
-                };
-
-                /*
-                 * Try again shortly in case
-                 * the script is still initializing.
-                 */
-                setTimeout(function () {
-
-                    if (
-                        typeof Tawk_API !== "undefined" &&
-                        typeof Tawk_API.maximize === "function"
-                    ) {
-
-                        Tawk_API.showWidget();
-                        Tawk_API.maximize();
-
-                    }
-
-                }, 1000);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart accounting software for small businesses. Invoicing, expenses, payroll, tax filing, and financial reports — all in one place.">
+  <title>QuickBooks | Smart Accounting Software for Small Businesses</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            qb: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#2ca01c',  // QuickBooks signature green
+              600: '#1e8712',
+              700: '#1a6b0f',
+              800: '#185510',
+              900: '#15440f',
+              950: '#082706',
+            },
+            slate: {
+              850: '#1e293b',
+              950: '#020617',
             }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+            'card': '0 1px 3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.03)',
+            'card-hover': '0 10px 40px -10px rgba(0,0,0,0.1), 0 4px 20px -4px rgba(0,0,0,0.06)',
+          },
+          borderRadius: {
+            'card': '1rem',
+            'card-lg': '1.5rem',
+          },
+          transitionDuration: {
+            '400': '400ms',
+          }
         }
+      }
+    }
+  </script>
+  
+  <style>
+    /* Custom animations */
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slide-down {
+      from { opacity: 0; max-height: 0; }
+      to { opacity: 1; max-height: 500px; }
+    }
+    @keyframes pulse-soft {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+    
+    .animate-fade-in-up { animation: fade-in-up 0.6s ease-out forwards; }
+    .animate-slide-down { animation: slide-down 0.3s ease-out forwards; }
+    .animate-pulse-soft { animation: pulse-soft 2s ease-in-out infinite; }
+    
+    /* Staggered entrance animations */
+    .stagger-1 { animation-delay: 0.1s; }
+    .stagger-2 { animation-delay: 0.2s; }
+    .stagger-3 { animation-delay: 0.3s; }
+    .stagger-4 { animation-delay: 0.4s; }
+    .stagger-5 { animation-delay: 0.5s; }
+    .stagger-6 { animation-delay: 0.6s; }
+    
+    /* FAQ Accordion */
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+      opacity: 0;
+    }
+    .faq-content.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.3s ease-out;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+    
+    /* Pricing Toggle */
+    .pricing-annual .price-monthly,
+    .pricing-monthly .price-annual {
+      display: none;
+    }
+    
+    /* Form Validation */
+    .input-error {
+      border-color: #ef4444 !important;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+    }
+    .input-success {
+      border-color: #2ca01c !important;
+    }
+    .error-message {
+      color: #ef4444;
+      font-size: 0.8125rem;
+      margin-top: 0.375rem;
+      display: none;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .error-message.visible { display: flex; }
+    
+    /* Focus visible for accessibility */
+    *:focus-visible {
+      outline: 2px solid #2ca01c;
+      outline-offset: 2px;
+    }
+    
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto; }
+    }
+    
+    /* Dashboard mockup styling */
+    .dashboard-mockup {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border: 1px solid #e2e8f0;
+    }
+    .mockup-window-bar {
+      background: #f1f5f9;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .mockup-dot { width: 12px; height: 12px; border-radius: 50%; }
+    
+    /* Screenshot tabs */
+    .screenshot-tab {
+      transition: all 0.2s ease;
+    }
+    .screenshot-tab.active {
+      background: #2ca01c;
+      color: white;
+    }
+    .screenshot-tab:not(.active):hover {
+      background: #f0fdf4;
+      color: #1a6b0f;
+    }
+    
+    /* Mobile nav */
+    .mobile-nav-enter {
+      transform: translateX(100%);
+      transition: transform 0.3s ease-out;
+    }
+    .mobile-nav-enter.active {
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-900 antialiased bg-white">
+  
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-18">
+        <!-- Logo -->
+        <div class="flex flex-col items-end">
+          <a href="#" class="flex items-center gap-2 text-qb-700 font-bold text-xl lg:text-2xl" aria-label="QuickBooks Home">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" class="text-qb-500">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 12h16M8 16h12M8 20h8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <span>QuickBooks</span>
+          </a>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#features" class="text-slate-600 hover:text-qb-600 font-medium text-sm transition-colors">Features</a>
+          <a href="#pricing" class="text-slate-600 hover:text-qb-600 font-medium text-sm transition-colors">Pricing</a>
+          <a href="#screenshots" class="text-slate-600 hover:text-qb-600 font-medium text-sm transition-colors">Product</a>
+          <a href="#testimonials" class="text-slate-600 hover:text-qb-600 font-medium text-sm transition-colors">Customers</a>
+          <a href="#resources" class="text-slate-600 hover:text-qb-600 font-medium text-sm transition-colors">Resources</a>
+          <a href="#support" class="text-slate-600 hover:text-qb-600 font-medium text-sm transition-colors">Support</a>
+        </div>
+        
+        <!-- Desktop Actions -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="#login" class="px-4 py-2 text-sm font-medium text-slate-700 hover:text-qb-600 hover:bg-slate-50 rounded-lg transition-all">Sign in</a>
+          <a href="#signup" class="px-5 py-2.5 text-sm font-semibold text-white bg-qb-500 hover:bg-qb-600 rounded-lg transition-all shadow-sm hover:shadow-md" data-cta="navbar">
+            Try Free
+          </a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600 hover:text-qb-600 hover:bg-slate-100 rounded-lg transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="lg:hidden fixed inset-0 z-40 bg-white transform translate-x-full mobile-nav-enter" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      <div class="flex flex-col h-full p-6 lg:p-8">
+        <div class="flex items-center justify-between mb-10">
+          <a href="#" class="flex items-center gap-2 text-qb-700 font-bold text-2xl" aria-label="QuickBooks Home">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" class="text-qb-500">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 12h16M8 16h12M8 20h8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <span>QuickBooks</span>
+          </a>
+          <button id="mobile-menu-close" class="p-2 text-slate-500 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors" aria-label="Close menu">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+        <nav class="flex-1 flex flex-col gap-1">
+          <a href="#features" class="px-4 py-3 text-lg font-medium text-slate-700 hover:text-qb-600 hover:bg-slate-50 rounded-lg transition-colors">Features</a>
+          <a href="#pricing" class="px-4 py-3 text-lg font-medium text-slate-700 hover:text-qb-600 hover:bg-slate-50 rounded-lg transition-colors">Pricing</a>
+          <a href="#screenshots" class="px-4 py-3 text-lg font-medium text-slate-700 hover:text-qb-600 hover:bg-slate-50 rounded-lg transition-colors">Product</a>
+          <a href="#testimonials" class="px-4 py-3 text-lg font-medium text-slate-700 hover:text-qb-600 hover:bg-slate-50 rounded-lg transition-colors">Customers</a>
+          <a href="#resources" class="px-4 py-3 text-lg font-medium text-slate-700 hover:text-qb-600 hover:bg-slate-50 rounded-lg transition-colors">Resources</a>
+          <a href="#support" class="px-4 py-3 text-lg font-medium text-slate-700 hover:text-qb-600 hover:bg-slate-50 rounded-lg transition-colors">Support</a>
+        </nav>
+        <div class="border-t border-slate-100 pt-6 space-y-3">
+          <a href="#login" class="block px-4 py-3 text-lg font-medium text-slate-700 hover:text-qb-600 hover:bg-slate-50 rounded-lg transition-colors">Sign in</a>
+          <a href="#signup" class="block px-5 py-3.5 text-lg font-semibold text-white bg-qb-500 hover:bg-qb-600 rounded-lg text-center transition-all shadow-sm" data-cta="mobile-nav">Try Free</a>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-overlay" class="lg:hidden fixed inset-0 z-30 bg-black/50 opacity-0 invisible transition-all duration-300" aria-hidden="true"></div>
+  </nav>
 
-    </script>
+  <!-- Click to Chat button: positioned below the header on the right -->
+  <div class="fixed top-20 right-6 z-40">
+    <button
+      onclick="if (window.Tawk_API) { Tawk_API.maximize(); }"
+      type="button"
+      class="flex items-center gap-2 px-4 py-2.5 bg-qb-500 hover:bg-qb-600 text-white text-sm font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all"
+      aria-label="Open support chat"
+    >
+      <i data-lucide="message-circle" class="w-5 h-5"></i>
+      Click to Chat
+    </button>
+  </div>
 
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-b from-qb-50/50 to-white overflow-hidden" id="home">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%232ca01c%22 fill-opacity=%220.03%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" aria-hidden="true"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Hero Content -->
+        <div class="text-center lg:text-left animate-fade-in-up">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-qb-50 text-qb-700 text-sm font-medium mb-6 border border-qb-100 animate-fade-in-up stagger-1">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-qb-500 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-qb-500"></span>
+            </span>
+            New: AI-powered categorization & smart reconciliation
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.1] mb-6 animate-fade-in-up stagger-2">
+            Smart accounting software for
+            <br>
+            <span class="text-qb-600">small businesses</span>
+          </h1>
+          
+          <p class="text-lg sm:text-xl text-slate-600 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed animate-fade-in-up stagger-3">
+            Automate invoicing, track expenses, run payroll, and file taxes — all in one place. Join 7M+ businesses saving 15+ hours a month.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10 animate-fade-in-up stagger-4">
+            <a href="#signup" class="w-full sm:w-auto px-8 py-3.5 text-base font-semibold text-white bg-qb-500 hover:bg-qb-600 rounded-lg transition-all shadow-sm hover:shadow-lg focus:ring-4 focus:ring-qb-100" data-cta="hero-primary">
+              Start free trial <i data-lucide="arrow-right" class="w-5 h-5 inline-block ml-2 -rotate-45"></i>
+            </a>
+            <a href="#demo" class="w-full sm:w-auto px-8 py-3.5 text-base font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg transition-all shadow-sm hover:shadow-md" data-cta="hero-secondary">
+              Watch demo (3 min)
+            </a>
+          </div>
+          
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-slate-500 animate-fade-in-up stagger-5">
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-5 h-5 text-qb-500"></i>
+              <span>No credit card required</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="refresh-ccw" class="w-5 h-5 text-qb-500"></i>
+              <span>Cancel anytime</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="database" class="w-5 h-5 text-qb-500"></i>
+              <span>Bank-level security</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Dashboard Mockup -->
+        <div class="relative animate-fade-in-up stagger-6" aria-hidden="true">
+          <div class="dashboard-mockup rounded-card-lg overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] border border-slate-200">
+            <!-- Window bar -->
+            <div class="mockup-window-bar px-4 py-3 flex items-center gap-2 border-b border-slate-200">
+              <div class="flex gap-1.5">
+                <div class="mockup-dot bg-red-400"></div>
+                <div class="mockup-dot bg-yellow-400"></div>
+                <div class="mockup-dot bg-green-400"></div>
+              </div>
+              <div class="ml-4 px-3 py-1 bg-white rounded-md text-xs text-slate-500 font-mono border border-slate-200">app.QuickBooks.com/dashboard</div>
+            </div>
+            
+            <!-- Dashboard Content -->
+            <div class="p-6 space-y-5">
+              <!-- Header -->
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xs font-semibold text-qb-600 uppercase tracking-wide">Welcome back, Sarah</p>
+                  <h2 class="text-2xl font-bold text-slate-900">Business Overview</h2>
+                </div>
+                <button class="px-4 py-2 bg-qb-500 text-white text-sm font-medium rounded-lg hover:bg-qb-600 transition-colors">+ New</button>
+              </div>
+              
+              <!-- Key Metrics -->
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white rounded-card p-4 border border-slate-100">
+                  <p class="text-xs font-medium text-slate-500 uppercase tracking-wide">Total Income</p>
+                  <p class="text-2xl font-bold text-slate-900 mt-1">\$48,750</p>
+                  <p class="text-xs text-qb-600 font-medium mt-1 flex items-center gap-1"><i data-lucide="trending-up" class="w-3 h-3"></i>+12.5% vs last month</p>
+                </div>
+                <div class="bg-white rounded-card p-4 border border-slate-100">
+                  <p class="text-xs font-medium text-slate-500 uppercase tracking-wide">Expenses</p>
+                  <p class="text-2xl font-bold text-slate-900 mt-1">\$18,230</p>
+                  <p class="text-xs text-red-500 font-medium mt-1 flex items-center gap-1"><i data-lucide="trending-up" class="w-3 h-3"></i>+3.2% vs last month</p>
+                </div>
+                <div class="bg-white rounded-card p-4 border border-slate-100">
+                  <p class="text-xs font-medium text-slate-500 uppercase tracking-wide">Profit</p>
+                  <p class="text-2xl font-bold text-qb-600 mt-1">\$30,520</p>
+                  <p class="text-xs text-qb-600 font-medium mt-1 flex items-center gap-1"><i data-lucide="trending-up" class="w-3 h-3"></i>+18.7% vs last month</p>
+                </div>
+                <div class="bg-white rounded-card p-4 border border-slate-100">
+                  <p class="text-xs font-medium text-slate-500 uppercase tracking-wide">Cash Flow</p>
+                  <p class="text-2xl font-bold text-slate-900 mt-1">\$22,100</p>
+                  <p class="text-xs text-slate-500 font-medium mt-1">Positive this month</p>
+                </div>
+              </div>
+              
+              <!-- Charts Row -->
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white rounded-card p-4 border border-slate-100 col-span-2">
+                  <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-semibold text-slate-900">Income vs Expenses</h3>
+                    <select class="text-xs text-slate-500 bg-slate-50 border border-slate-200 px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-qb-200">
+                      <option>Last 6 months</option>
+                      <option>Last 12 months</option>
+                      <option>YTD</option>
+                    </select>
+                  </div>
+                  <div class="h-32 flex items-end justify-around gap-2">
+                    <div class="flex-1 flex flex-col items-center">
+                      <div class="w-full bg-qb-500 rounded-t h-[60%] transition-all hover:h-[65%]"></div>
+                      <span class="text-xs text-slate-500 mt-2">Jan</span>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center">
+                      <div class="w-full bg-qb-400 rounded-t h-[45%] transition-all hover:h-[50%]"></div>
+                      <span class="text-xs text-slate-500 mt-2">Feb</span>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center">
+                      <div class="w-full bg-qb-500 rounded-t h-[70%] transition-all hover:h-[75%]"></div>
+                      <span class="text-xs text-slate-500 mt-2">Mar</span>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center">
+                      <div class="w-full bg-qb-400 rounded-t h-[50%] transition-all hover:h-[55%]"></div>
+                      <span class="text-xs text-slate-500 mt-2">Apr</span>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center">
+                      <div class="w-full bg-qb-500 rounded-t h-[80%] transition-all hover:h-[85%]"></div>
+                      <span class="text-xs text-slate-500 mt-2">May</span>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center">
+                      <div class="w-full bg-qb-400 rounded-t h-[55%] transition-all hover:h-[60%]"></div>
+                      <span class="text-xs text-slate-500 mt-2">Jun</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-center gap-6 mt-4 text-xs">
+                    <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded bg-qb-500"></div><span>Income</span></div>
+                    <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded bg-qb-300"></div><span>Expenses</span></div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Recent Activity -->
+              <div class="bg-white rounded-card p-4 border border-slate-100">
+                <h3 class="font-semibold text-slate-900 mb-4">Recent Transactions</h3>
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between py-2 border-b border-slate-100 last:border-0">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-lg bg-qb-50 flex items-center justify-center"><i data-lucide="credit-card" class="w-5 h-5 text-qb-600"></i></div>
+                      <div>
+                        <p class="font-medium text-slate-900 text-sm">Stripe Payment</p>
+                        <p class="text-xs text-slate-500">Invoice #INV-2041 paid</p>
+                      </div>
+                    </div>
+                    <span class="font-semibold text-qb-600">+\$2,450.00</span>
+                  </div>
+                  <div class="flex items-center justify-between py-2 border-b border-slate-100 last:border-0">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center"><i data-lucide="shopping-cart" class="w-5 h-5 text-red-600"></i></div>
+                      <div>
+                        <p class="font-medium text-slate-900 text-sm">Amazon Business</p>
+                        <p class="text-xs text-slate-500">Office supplies</p>
+                      </div>
+                    </div>
+                    <span class="font-semibold text-red-600">-\$342.18</span>
+                  </div>
+                  <div class="flex items-center justify-between py-2 border-b border-slate-100 last:border-0">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center"><i data-lucide="users" class="w-5 h-5 text-blue-600"></i></div>
+                      <div>
+                        <p class="font-medium text-slate-900 text-sm">Payroll Run</p>
+                        <p class="text-xs text-slate-500">June 2024 payroll</p>
+                      </div>
+                    </div>
+                    <span class="font-semibold text-red-600">-\$8,750.00</span>
+                  </div>
+                  <div class="flex items-center justify-between py-2">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-lg bg-purple-50 flex items-center justify-center"><i data-lucide="file-text" class="w-5 h-5 text-purple-600"></i></div>
+                      <div>
+                        <p class="font-medium text-slate-900 text-sm">Square Payment</p>
+                        <p class="text-xs text-slate-500">Invoice #INV-2038 paid</p>
+                      </div>
+                    </div>
+                    <span class="font-semibold text-qb-600">+\$1,890.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Floating badges -->
+          <div class="absolute -bottom-6 -left-6 bg-white rounded-card-lg p-4 shadow-card-hover border border-slate-100 animate-fade-in-up stagger-6" style="animation-delay: 0.7s;">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-lg bg-qb-100 flex items-center justify-center"><i data-lucide="zap" class="w-6 h-6 text-qb-600"></i></div>
+              <div>
+                <p class="font-semibold text-slate-900">Automated</p>
+                <p class="text-sm text-slate-500">95% categorized</p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 right-6 bg-white rounded-card-lg p-4 shadow-card-hover border border-slate-100 animate-fade-in-up stagger-6" style="animation-delay: 0.8s;">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center"><i data-lucide="brain" class="w-6 h-6 text-purple-600"></i></div>
+              <div>
+                <p class="font-semibold text-slate-900">AI Insights</p>
+                <p class="text-sm text-slate-500">3 tax deductions found</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       TRUST BAR
+  ============================================================ -->
+  <section class="py-12 bg-white border-y border-slate-100" aria-labelledby="trust-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="trust-heading" class="sr-only">Trusted by millions</h2>
+      <div class="flex flex-wrap items-center justify-center gap-8 lg:gap-16 opacity-60 hover:opacity-100 transition-opacity duration-300">
+        <div class="flex items-center gap-2 text-slate-400 font-medium text-sm">
+          <i data-lucide="users" class="w-5 h-5"></i>
+          <span>Trusted by <strong class="text-slate-900">7 million</strong> small businesses worldwide</span>
+        </div>
+        <div class="flex items-center gap-8 text-slate-400 font-medium text-sm">
+          <span class="flex items-center gap-1"><i data-lucide="star" class="w-4 h-4 fill-yellow-400 text-yellow-400"></i>4.8/5 (12,000+ reviews)</span>
+          <span class="flex items-center gap-1"><i data-lucide="award" class="w-4 h-4"></i>#1 Accounting Software</span>
+          <span class="flex items-center gap-1"><i data-lucide="shield" class="w-4 h-4"></i>SOC 2 Type II Certified</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURES SECTION
+  ============================================================ -->
+  <section id="features" class="py-20 lg:py-28 bg-white" aria-labelledby="features-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 animate-fade-in-up">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-qb-700 bg-qb-50 rounded-full mb-4">Core Features</span>
+        <h2 id="features-heading" class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Everything you need to run your business finances</h2>
+        <p class="text-lg text-slate-600">Powerful tools that automate the busywork so you can focus on growth.</p>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Feature 1: Invoicing -->
+        <article class="group bg-white rounded-card-lg p-6 border border-slate-100 hover:border-qb-200 hover:shadow-card-hover transition-all duration-300 animate-fade-in-up stagger-1">
+          <div class="w-12 h-12 rounded-lg bg-qb-50 flex items-center justify-center mb-4 group-hover:bg-qb-100 transition-colors">
+            <i data-lucide="file-text" class="w-6 h-6 text-qb-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">Professional Invoicing</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Create and send custom invoices in minutes. Accept cards, ACH, Apple Pay. Auto-reminders get you paid 2x faster.</p>
+        </article>
+        
+        <!-- Feature 2: Expense Tracking -->
+        <article class="group bg-white rounded-card-lg p-6 border border-slate-100 hover:border-qb-200 hover:shadow-card-hover transition-all duration-300 animate-fade-in-up stagger-2">
+          <div class="w-12 h-12 rounded-lg bg-qb-50 flex items-center justify-center mb-4 group-hover:bg-qb-100 transition-colors">
+            <i data-lucide="receipt" class="w-6 h-6 text-qb-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">Expense Tracking</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Snap receipts, auto-import from banks, categorize with AI. Never miss a deduction — 95% auto-categorized.</p>
+        </article>
+        
+        <!-- Feature 3: Payroll -->
+        <article class="group bg-white rounded-card-lg p-6 border border-slate-100 hover:border-qb-200 hover:shadow-card-hover transition-all duration-300 animate-fade-in-up stagger-3">
+          <div class="w-12 h-12 rounded-lg bg-qb-50 flex items-center justify-center mb-4 group-hover:bg-qb-100 transition-colors">
+            <i data-lucide="users" class="w-6 h-6 text-qb-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">Full-Service Payroll</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Automated tax calculations, filings, and direct deposit. W-2s, 1099s, and compliance handled. 50-state support.</p>
+        </article>
+        
+        <!-- Feature 4: Tax Filing -->
+        <article class="group bg-white rounded-card-lg p-6 border border-slate-100 hover:border-qb-200 hover:shadow-card-hover transition-all duration-300 animate-fade-in-up stagger-4">
+          <div class="w-12 h-12 rounded-lg bg-qb-50 flex items-center justify-center mb-4 group-hover:bg-qb-100 transition-colors">
+            <i data-lucide="calculator" class="w-6 h-6 text-qb-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">Tax Preparation & Filing</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Year-round tax estimates, quarterly payments, and guaranteed accurate filing. CPA review included on Plus plans.</p>
+        </article>
+        
+        <!-- Feature 5: Bank Reconciliation -->
+        <article class="group bg-white rounded-card-lg p-6 border border-slate-100 hover:border-qb-200 hover:shadow-card-hover transition-all duration-300 animate-fade-in-up stagger-5">
+          <div class="w-12 h-12 rounded-lg bg-qb-50 flex items-center justify-center mb-4 group-hover:bg-qb-100 transition-colors">
+            <i data-lucide="banknote" class="w-6 h-6 text-qb-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">Bank Reconciliation</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Connect 11,000+ banks. Smart matching learns your patterns. Reconcile in clicks, not hours. Real-time balance sync.</p>
+        </article>
+        
+        <!-- Feature 6: Financial Reports -->
+        <article class="group bg-white rounded-card-lg p-6 border border-slate-100 hover:border-qb-200 hover:shadow-card-hover transition-all duration-300 animate-fade-in-up stagger-6">
+          <div class="w-12 h-12 rounded-lg bg-qb-50 flex items-center justify-center mb-4 group-hover:bg-qb-100 transition-colors">
+            <i data-lucide="bar-chart-3" class="w-6 h-6 text-qb-600"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">Financial Reports</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">P&L, balance sheet, cash flow, custom reports. Scheduled email delivery. Export to Excel. Real-time insights.</p>
+        </article>
+      </div>
+      
+      <div class="text-center mt-12 animate-fade-in-up">
+        <a href="#features" class="text-qb-600 font-semibold text-sm hover:text-qb-700 flex items-center justify-center gap-1.5 inline-flex">
+          View all features <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRODUCT SCREENSHOTS / DASHBOARD PREVIEW
+  ============================================================ -->
+  <section id="screenshots" class="py-20 lg:py-28 bg-slate-50" aria-labelledby="screenshots-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12 animate-fade-in-up">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-qb-700 bg-qb-50 rounded-full mb-4">Product Tour</span>
+        <h2 id="screenshots-heading" class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">See QuickBooks in action</h2>
+        <p class="text-lg text-slate-600">Explore the views that help you stay on top of your finances.</p>
+      </div>
+      
+      <!-- Tabs -->
+      <div class="flex flex-wrap justify-center gap-2 mb-8 animate-fade-in-up stagger-1" role="tablist" aria-label="Product views">
+        <button class="screenshot-tab px-5 py-2.5 rounded-lg text-sm font-medium text-slate-600 active" role="tab" aria-selected="true" aria-controls="panel-dashboard" data-tab="dashboard">Dashboard</button>
+        <button class="screenshot-tab px-5 py-2.5 rounded-lg text-sm font-medium text-slate-600" role="tab" aria-selected="false" aria-controls="panel-invoices" data-tab="invoices">Invoices</button>
+        <button class="screenshot-tab px-5 py-2.5 rounded-lg text-sm font-medium text-slate-600" role="tab" aria-selected="false" aria-controls="panel-expenses" data-tab="expenses">Expenses</button>
+        <button class="screenshot-tab px-5 py-2.5 rounded-lg text-sm font-medium text-slate-600" role="tab" aria-selected="false" aria-controls="panel-reports" data-tab="reports">Reports</button>
+        <button class="screenshot-tab px-5 py-2.5 rounded-lg text-sm font-medium text-slate-600" role="tab" aria-selected="false" aria-controls="panel-mobile" data-tab="mobile">Mobile App</button>
+      </div>
+      
+      <!-- Tab Panels -->
+      <div class="relative animate-fade-in-up stagger-2">
+        <!-- Dashboard Panel -->
+        <div id="panel-dashboard" role="tabpanel" aria-labelledby="tab-dashboard" class="screenshot-panel">
+          <div class="dashboard-mockup rounded-card-lg overflow-hidden shadow-card border border-slate-200 aspect-video max-w-4xl mx-auto">
+            <div class="mockup-window-bar px-4 py-3 flex items-center gap-2 border-b border-slate-200">
+              <div class="flex gap-1.5">
+                <div class="mockup-dot bg-red-400"></div>
+                <div class="mockup-dot bg-yellow-400"></div>
+                <div class="mockup-dot bg-green-400"></div>
+              </div>
+            </div>
+            <div class="p-6 h-[calc(100%-46px)] bg-white">
+              <div class="h-full flex flex-col gap-4">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-slate-900">Business Overview</h3>
+                  <span class="text-xs text-slate-500">Last updated: 2 min ago</span>
+                </div>
+                <div class="grid grid-cols-4 gap-3">
+                  <div class="bg-qb-50 rounded-card p-4 border border-qb-100">
+                    <p class="text-xs font-medium text-qb-700 uppercase tracking-wide">Revenue</p>
+                    <p class="text-2xl font-bold text-qb-700 mt-1">\$48,750</p>
+                  </div>
+                  <div class="bg-slate-50 rounded-card p-4 border border-slate-100">
+                    <p class="text-xs font-medium text-slate-600 uppercase tracking-wide">Expenses</p>
+                    <p class="text-2xl font-bold text-slate-700 mt-1">\$18,230</p>
+                  </div>
+                  <div class="bg-white rounded-card p-4 border border-slate-100">
+                    <p class="text-xs font-medium text-slate-600 uppercase tracking-wide">Profit</p>
+                    <p class="text-2xl font-bold text-qb-600 mt-1">\$30,520</p>
+                  </div>
+                  <div class="bg-white rounded-card p-4 border border-slate-100">
+                    <p class="text-xs font-medium text-slate-600 uppercase tracking-wide">Cash Flow</p>
+                    <p class="text-2xl font-bold text-slate-700 mt-1">\$22,100</p>
+                  </div>
+                </div>
+                <div class="flex-1 bg-slate-50/50 rounded-card border border-slate-100 flex items-center justify-center">
+                  <div class="text-center text-slate-400">
+                    <i data-lucide="bar-chart-3" class="w-12 h-12 mx-auto mb-2 opacity-50"></i>
+                    <p class="text-sm">Income vs Expenses Chart</p>
+                    <p class="text-xs">6-month trend visualization</p>
+                  </div>
+                </div>
+                <div class="bg-white rounded-card border border-slate-100 overflow-hidden">
+                  <div class="px-4 py-3 border-b border-slate-100 font-medium text-slate-900">Recent Activity</div>
+                  <div class="p-4 space-y-3 max-h-40 overflow-y-auto">
+                    <div class="flex items-center justify-between text-sm">
+                      <span class="text-slate-600">Invoice #INV-2041 paid</span>
+                      <span class="font-semibold text-qb-600">+\$2,450</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                      <span class="text-slate-600">Expense: Amazon Business</span>
+                      <span class="font-semibold text-red-600">-\$342</span>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                      <span class="text-slate-600">Payroll run completed</span>
+                      <span class="font-semibold text-red-600">-\$8,750</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Invoices Panel -->
+        <div id="panel-invoices" role="tabpanel" aria-labelledby="tab-invoices" class="screenshot-panel hidden" hidden>
+          <div class="dashboard-mockup rounded-card-lg overflow-hidden shadow-card border border-slate-200 aspect-video max-w-4xl mx-auto">
+            <div class="mockup-window-bar px-4 py-3 flex items-center gap-2 border-b border-slate-200">
+              <div class="flex gap-1.5">
+                <div class="mockup-dot bg-red-400"></div>
+                <div class="mockup-dot bg-yellow-400"></div>
+                <div class="mockup-dot bg-green-400"></div>
+              </div>
+            </div>
+            <div class="p-6 h-[calc(100%-46px)] bg-white">
+              <div class="h-full flex flex-col gap-4">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-slate-900">Invoices</h3>
+                  <button class="px-4 py-2 bg-qb-500 text-white text-sm font-medium rounded-lg hover:bg-qb-600 transition-colors">+ Create Invoice</button>
+                </div>
+                <div class="flex-1 overflow-hidden">
+                  <table class="w-full text-sm">
+                    <thead>
+                      <tr class="text-left text-xs font-medium text-slate-500 uppercase tracking-wide border-b border-slate-100">
+                        <th class="pb-3 px-4">Invoice</th>
+                        <th class="pb-3 px-4">Client</th>
+                        <th class="pb-3 px-4">Date</th>
+                        <th class="pb-3 px-4">Due</th>
+                        <th class="pb-3 px-4 text-right">Amount</th>
+                        <th class="pb-3 px-4">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                      <tr class="hover:bg-slate-50 transition-colors">
+                        <td class="py-4 px-4 font-medium text-slate-900">INV-2041</td>
+                        <td class="py-4 px-4 text-slate-600">Acme Corp</td>
+                        <td class="py-4 px-4 text-slate-500">Jun 15</td>
+                        <td class="py-4 px-4 text-slate-500">Jul 15</td>
+                        <td class="py-4 px-4 text-right font-semibold text-slate-900">\$2,450.00</td>
+                        <td class="py-4 px-4"><span class="px-2 py-1 text-xs font-medium bg-qb-100 text-qb-700 rounded-full">Paid</span></td>
+                      </tr>
+                      <tr class="hover:bg-slate-50 transition-colors">
+                        <td class="py-4 px-4 font-medium text-slate-900">INV-2040</td>
+                        <td class="py-4 px-4 text-slate-600">Design Studio</td>
+                        <td class="py-4 px-4 text-slate-500">Jun 10</td>
+                        <td class="py-4 px-4 text-slate-500">Jul 10</td>
+                        <td class="py-4 px-4 text-right font-semibold text-slate-900">\$3,200.00</td>
+                        <td class="py-4 px-4"><span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-700 rounded-full">Pending</span></td>
+                      </tr>
+                      <tr class="hover:bg-slate-50 transition-colors">
+                        <td class="py-4 px-4 font-medium text-slate-900">INV-2039</td>
+                        <td class="py-4 px-4 text-slate-600">TechStart Inc</td>
+                        <td class="py-4 px-4 text-slate-500">Jun 5</td>
+                        <td class="py-4 px-4 text-slate-500">Jul 5</td>
+                        <td class="py-4 px-4 text-right font-semibold text-slate-900">\$1,890.00</td>
+                        <td class="py-4 px-4"><span class="px-2 py-1 text-xs font-medium bg-qb-100 text-qb-700 rounded-full">Paid</span></td>
+                      </tr>
+                      <tr class="hover:bg-slate-50 transition-colors">
+                        <td class="py-4 px-4 font-medium text-slate-900">INV-2038</td>
+                        <td class="py-4 px-4 text-slate-600">Global Logistics</td>
+                        <td class="py-4 px-4 text-slate-500">Jun 1</td>
+                        <td class="py-4 px-4 text-slate-500">Jul 1</td>
+                        <td class="py-4 px-4 text-right font-semibold text-slate-900">\$5,600.00</td>
+                        <td class="py-4 px-4"><span class="px-2 py-1 text-xs font-medium bg-red-100 text-red-700 rounded-full">Overdue</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Expenses Panel -->
+        <div id="panel-expenses" role="tabpanel" aria-labelledby="tab-expenses" class="screenshot-panel hidden" hidden>
+          <div class="dashboard-mockup rounded-card-lg overflow-hidden shadow-card border border-slate-200 aspect-video max-w-4xl mx-auto">
+            <div class="mockup-window-bar px-4 py-3 flex items-center gap-2 border-b border-slate-200">
+              <div class="flex gap-1.5">
+                <div class="mockup-dot bg-red-400"></div>
+                <div class="mockup-dot bg-yellow-400"></div>
+                <div class="mockup-dot bg-green-400"></div>
+              </div>
+            </div>
+            <div class="p-6 h-[calc(100%-46px)] bg-white">
+              <div class="h-full flex flex-col gap-4">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-slate-900">Expenses</h3>
+                  <div class="flex gap-2">
+                    <button class="px-3 py-1.5 text-sm text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50">Import</button>
+                    <button class="px-3 py-1.5 text-sm font-medium text-white bg-qb-500 rounded-lg hover:bg-qb-600">+ Add Expense</button>
+                  </div>
+                </div>
+                <div class="grid grid-cols-3 gap-4 mb-4">
+                  <div class="bg-white rounded-card p-4 border border-slate-100 text-center">
+                    <p class="text-2xl font-bold text-slate-900">\$18,230</p>
+                    <p class="text-xs text-slate-500 mt-1">Total This Month</p>
+                  </div>
+                  <div class="bg-white rounded-card p-4 border border-slate-100 text-center">
+                    <p class="text-2xl font-bold text-qb-600">87%</p>
+                    <p class="text-xs text-slate-500 mt-1">Auto-Categorized</p>
+                  </div>
+                  <div class="bg-white rounded-card p-4 border border-slate-100 text-center">
+                    <p class="text-2xl font-bold text-slate-900">23</p>
+                    <p class="text-xs text-slate-500 mt-1">Receipts Pending</p>
+                  </div>
+                </div>
+                <div class="flex-1 bg-slate-50/50 rounded-card border border-slate-100 flex items-center justify-center">
+                  <div class="text-center text-slate-400">
+                    <i data-lucide="pie-chart" class="w-12 h-12 mx-auto mb-2 opacity-50"></i>
+                    <p class="text-sm">Expenses by Category</p>
+                    <p class="text-xs">Interactive breakdown chart</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Reports Panel -->
+        <div id="panel-reports" role="tabpanel" aria-labelledby="tab-reports" class="screenshot-panel hidden" hidden>
+          <div class="dashboard-mockup rounded-card-lg overflow-hidden shadow-card border border-slate-200 aspect-video max-w-4xl mx-auto">
+            <div class="mockup-window-bar px-4 py-3 flex items-center gap-2 border-b border-slate-200">
+              <div class="flex gap-1.5">
+                <div class="mockup-dot bg-red-400"></div>
+                <div class="mockup-dot bg-yellow-400"></div>
+                <div class="mockup-dot bg-green-400"></div>
+              </div>
+            </div>
+            <div class="p-6 h-[calc(100%-46px)] bg-white">
+              <div class="h-full flex flex-col gap-4">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-semibold text-slate-900">Reports Center</h3>
+                  <select class="px-3 py-1.5 text-sm text-slate-600 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-qb-200">
+                    <option>All Reports</option>
+                    <option>Business Overview</option>
+                    <option>Sales & Customers</option>
+                    <option>Expenses & Vendors</option>
+                  </select>
+                </div>
+                <div class="flex-1 grid grid-cols-2 md:grid-cols-3 gap-4">
+                  <div class="bg-white rounded-card p-5 border border-slate-100 hover:border-qb-200 hover:shadow-card transition-all group cursor-pointer">
+                    <div class="w-10 h-10 rounded-lg bg-qb-50 flex items-center justify-center mb-3 group-hover:bg-qb-100 transition-colors"><i data-lucide="file-text" class="w-5 h-5 text-qb-600"></i></div>
+                    <h4 class="font-semibold text-slate-900">Profit & Loss</h4>
+                    <p class="text-sm text-slate-500 mt-1">Compare income vs expenses</p>
+                  </div>
+                  <div class="bg-white rounded-card p-5 border border-slate-100 hover:border-qb-200 hover:shadow-card transition-all group cursor-pointer">
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mb-3 group-hover:bg-blue-100 transition-colors"><i data-lucide="banknote" class="w-5 h-5 text-blue-600"></i></div>
+                    <h4 class="font-semibold text-slate-900">Balance Sheet</h4>
+                    <p class="text-sm text-slate-500 mt-1">Assets, liabilities, equity</p>
+                  </div>
+                  <div class="bg-white rounded-card p-5 border border-slate-100 hover:border-qb-200 hover:shadow-card transition-all group cursor-pointer">
+                    <div class="w-10 h-10 rounded-lg bg-purple-50 flex items-center justify-center mb-3 group-hover:bg-purple-100 transition-colors"><i data-lucide="currency-dollar" class="w-5 h-5 text-purple-600"></i></div>
+                    <h4 class="font-semibold text-slate-900">Cash Flow</h4>
+                    <p class="text-sm text-slate-500 mt-1">Money in vs money out</p>
+                  </div>
+                  <div class="bg-white rounded-card p-5 border border-slate-100 hover:border-qb-200 hover:shadow-card transition-all group cursor-pointer">
+                    <div class="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center mb-3 group-hover:bg-orange-100 transition-colors"><i data-lucide="trending-up" class="w-5 h-5 text-orange-600"></i></div>
+                    <h4 class="font-semibold text-slate-900">Sales by Customer</h4>
+                    <p class="text-sm text-slate-500 mt-1">Top revenue sources</p>
+                  </div>
+                  <div class="bg-white rounded-card p-5 border border-slate-100 hover:border-qb-200 hover:shadow-card transition-all group cursor-pointer">
+                    <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center mb-3 group-hover:bg-red-100 transition-colors"><i data-lucide="credit-card" class="w-5 h-5 text-red-600"></i></div>
+                    <h4 class="font-semibold text-slate-900">Expense Summary</h4>
+                    <p class="text-sm text-slate-500 mt-1">By category & vendor</p>
+                  </div>
+                  <div class="bg-white rounded-card p-5 border border-slate-100 hover:border-qb-200 hover:shadow-card transition-all group cursor-pointer">
+                    <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center mb-3 group-hover:bg-teal-100 transition-colors"><i data-lucide="calendar" class="w-5 h-5 text-teal-600"></i></div>
+                    <h4 class="font-semibold text-slate-900">Tax Summary</h4>
+                    <p class="text-sm text-slate-500 mt-1">Quarterly & annual prep</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Mobile Panel -->
+        <div id="panel-mobile" role="tabpanel" aria-labelledby="tab-mobile" class="screenshot-panel hidden" hidden>
+          <div class="max-w-sm mx-auto">
+            <div class="bg-slate-900 rounded-[2rem] p-2 shadow-2xl">
+              <div class="bg-white rounded-[1.75rem] overflow-hidden aspect-[9/19.5] relative">
+                <div class="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-1 bg-slate-200 rounded-full"></div>
+                <div class="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
+                  <span class="text-xs font-medium text-slate-500">QuickBooks</span>
+                  <i data-lucide="more-horizontal" class="w-5 h-5 text-slate-400"></i>
+                </div>
+                <div class="p-6 pt-16 space-y-4">
+                  <div class="bg-qb-500 rounded-xl p-5 text-white">
+                    <p class="text-xs font-medium uppercase tracking-wide opacity-80">Available Balance</p>
+                    <p class="text-3xl font-bold mt-1">\$22,100</p>
+                    <p class="text-xs opacity-70 mt-2">+\$3,450 this week</p>
+                  </div>
+                  <div class="grid grid-cols-3 gap-3">
+                    <button class="bg-slate-100 rounded-xl p-4 text-center hover:bg-slate-200 transition-colors">
+                      <i data-lucide="plus" class="w-6 h-6 text-slate-600 mx-auto mb-1"></i>
+                      <p class="text-xs font-medium text-slate-700">New</p>
+                    </button>
+                    <button class="bg-slate-100 rounded-xl p-4 text-center hover:bg-slate-200 transition-colors">
+                      <i data-lucide="camera" class="w-6 h-6 text-slate-600 mx-auto mb-1"></i>
+                      <p class="text-xs font-medium text-slate-700">Scan</p>
+                    </button>
+                    <button class="bg-slate-100 rounded-xl p-4 text-center hover:bg-slate-200 transition-colors">
+                      <i data-lucide="send" class="w-6 h-6 text-slate-600 mx-auto mb-1"></i>
+                      <p class="text-xs font-medium text-slate-700">Invoice</p>
+                    </button>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-between py-2 border-b border-slate-100">
+                      <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-qb-100 flex items-center justify-center"><i data-lucide="credit-card" class="w-5 h-5 text-qb-600"></i></div>
+                        <div>
+                          <p class="text-sm font-medium text-slate-900">Stripe</p>
+                          <p class="text-xs text-slate-500">Invoice paid</p>
+                        </div>
+                      </div>
+                      <span class="font-semibold text-qb-600 text-sm">+\$2,450</span>
+                    </div>
+                    <div class="flex items-center justify-between py-2 border-b border-slate-100">
+                      <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center"><i data-lucide="shopping-cart" class="w-5 h-5 text-red-600"></i></div>
+                        <div>
+                          <p class="text-sm font-medium text-slate-900">Amazon</p>
+                          <p class="text-xs text-slate-500">Supplies</p>
+                        </div>
+                      </div>
+                      <span class="font-semibold text-red-600 text-sm">-\$124</span>
+                    </div>
+                    <div class="flex items-center justify-between py-2">
+                      <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center"><i data-lucide="users" class="w-5 h-5 text-blue-600"></i></div>
+                        <div>
+                          <p class="text-sm font-medium text-slate-900">Payroll</p>
+                          <p class="text-xs text-slate-500">June run</p>
+                        </div>
+                      </div>
+                      <span class="font-semibold text-red-600 text-sm">-\$8,750</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 bg-white border-t border-slate-100">
+                  <div class="flex justify-around py-2">
+                    <button class="flex flex-col items-center gap-1 text-qb-600">
+                      <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+                      <span class="text-xs">Home</span>
+                    </button>
+                    <button class="flex flex-col items-center gap-1 text-slate-400">
+                      <i data-lucide="credit-card" class="w-6 h-6"></i>
+                      <span class="text-xs">Invoices</span>
+                    </button>
+                    <button class="flex flex-col items-center gap-1 text-slate-400">
+                      <i data-lucide="receipt" class="w-6 h-6"></i>
+                      <span class="text-xs">Expenses</span>
+                    </button>
+                    <button class="flex flex-col items-center gap-1 text-slate-400">
+                      <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                      <span class="text-xs">Reports</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRICING SECTION
+  ============================================================ -->
+  <section id="pricing" class="py-20 lg:py-28 bg-white" aria-labelledby="pricing-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12 animate-fade-in-up">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-qb-700 bg-qb-50 rounded-full mb-4">Simple, transparent pricing</span>
+        <h2 id="pricing-heading" class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Choose the plan that fits your business</h2>
+        <p class="text-lg text-slate-600">All plans include a 30-day free trial. No credit card required. Cancel anytime.</p>
+      </div>
+      
+      <!-- Pricing Toggle -->
+      <div class="flex items-center justify-center gap-4 mb-12 animate-fade-in-up stagger-1">
+        <span class="text-sm font-medium text-slate-600">Monthly</span>
+        <div class="relative">
+          <input type="checkbox" id="pricing-toggle" class="peer sr-only" aria-label="Switch to annual billing">
+          <label for="pricing-toggle" class="block w-12 h-7 bg-slate-200 peer-focus:ring-4 peer-focus:ring-qb-200 rounded-full peer peer-checked:bg-qb-500 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-hover:after:shadow-md cursor-pointer"></label>
+        </div>
+        <span class="text-sm font-medium text-slate-600 flex items-center gap-1">
+          Annual
+          <span class="px-2 py-0.5 text-xs font-semibold text-white bg-qb-500 rounded-full">Save 20%</span>
+        </span>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="pricing-cards">
+        <!-- Plan 1: Simple Start -->
+        <article class="pricing-card group bg-white rounded-card-lg p-6 border border-slate-100 hover:border-qb-200 hover:shadow-card-hover transition-all duration-300 flex flex-col animate-fade-in-up stagger-1" data-plan="simple-start">
+          <div class="mb-6">
+            <h3 class="font-semibold text-slate-900 mb-1">Simple Start</h3>
+            <p class="text-sm text-slate-500">For solopreneurs & freelancers</p>
+          </div>
+          <div class="mb-6">
+            <div class="price-monthly flex items-baseline gap-1">
+              <span class="text-4xl font-bold text-slate-900">\$15</span>
+              <span class="text-slate-500">/month</span>
+            </div>
+            <div class="price-annual flex items-baseline gap-1 hidden">
+              <span class="text-4xl font-bold text-slate-900">\$12</span>
+              <span class="text-slate-500">/month</span>
+              <span class="ml-2 px-2 py-0.5 text-xs font-semibold text-white bg-qb-500 rounded">Billed \$144/yr</span>
+            </div>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1" role="list">
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Track income & expenses</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Send custom invoices</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Accept online payments</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Run basic reports</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Connect 1 bank account</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Capture receipts (mobile)</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>1 user + 1 accountant</span></li>
+          </ul>
+          <a href="#signup" class="block w-full px-5 py-3 text-center font-semibold text-qb-600 bg-qb-50 hover:bg-qb-100 rounded-lg transition-colors" data-cta="pricing-simple">Try free for 30 days</a>
+        </article>
+        
+        <!-- Plan 2: Essentials (Most Popular) -->
+        <article class="pricing-card group relative bg-white rounded-card-lg p-6 border-2 border-qb-300 shadow-card-hover hover:shadow-[0_20px_50px_-10px_rgba(44,160,28,0.15)] transition-all duration-300 flex flex-col animate-fade-in-up stagger-2" data-plan="essentials">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-qb-500 text-white text-xs font-semibold rounded-full">Most Popular</div>
+          <div class="mb-6 pt-6">
+            <h3 class="font-semibold text-slate-900 mb-1">Essentials</h3>
+            <p class="text-sm text-slate-500">For growing small businesses</p>
+          </div>
+          <div class="mb-6">
+            <div class="price-monthly flex items-baseline gap-1">
+              <span class="text-4xl font-bold text-slate-900">\$30</span>
+              <span class="text-slate-500">/month</span>
+            </div>
+            <div class="price-annual flex items-baseline gap-1 hidden">
+              <span class="text-4xl font-bold text-slate-900">\$24</span>
+              <span class="text-slate-500">/month</span>
+              <span class="ml-2 px-2 py-0.5 text-xs font-semibold text-white bg-qb-500 rounded">Billed \$288/yr</span>
+            </div>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1" role="list">
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Everything in Simple Start</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Manage & pay bills</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Track time & profitability</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Connect 3 bank accounts</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Multi-currency support</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Recurring transactions</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>3 users + 1 accountant</span></li>
+          </ul>
+          <a href="#signup" class="block w-full px-5 py-3 text-center font-semibold text-white bg-qb-500 hover:bg-qb-600 rounded-lg transition-all shadow-sm hover:shadow-md" data-cta="pricing-essentials">Try free for 30 days</a>
+        </article>
+        
+        <!-- Plan 3: Plus -->
+        <article class="pricing-card group bg-white rounded-card-lg p-6 border border-slate-100 hover:border-qb-200 hover:shadow-card-hover transition-all duration-300 flex flex-col animate-fade-in-up stagger-3" data-plan="plus">
+          <div class="mb-6">
+            <h3 class="font-semibold text-slate-900 mb-1">Plus</h3>
+            <p class="text-sm text-slate-500">For established businesses</p>
+          </div>
+          <div class="mb-6">
+            <div class="price-monthly flex items-baseline gap-1">
+              <span class="text-4xl font-bold text-slate-900">\$55</span>
+              <span class="text-slate-500">/month</span>
+            </div>
+            <div class="price-annual flex items-baseline gap-1 hidden">
+              <span class="text-4xl font-bold text-slate-900">\$44</span>
+              <span class="text-slate-500">/month</span>
+              <span class="ml-2 px-2 py-0.5 text-xs font-semibold text-white bg-qb-500 rounded">Billed \$528/yr</span>
+            </div>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1" role="list">
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Everything in Essentials</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Track inventory & COGS</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Project profitability tracking</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Connect 5 bank accounts</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Advanced reporting & budgets</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Custom user permissions</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>5 users + 1 accountant</span></li>
+          </ul>
+          <a href="#signup" class="block w-full px-5 py-3 text-center font-semibold text-qb-600 bg-qb-50 hover:bg-qb-100 rounded-lg transition-colors" data-cta="pricing-plus">Try free for 30 days</a>
+        </article>
+        
+        <!-- Plan 4: Advanced -->
+        <article class="pricing-card group bg-white rounded-card-lg p-6 border border-slate-100 hover:border-qb-200 hover:shadow-card-hover transition-all duration-300 flex flex-col animate-fade-in-up stagger-4" data-plan="advanced">
+          <div class="mb-6">
+            <h3 class="font-semibold text-slate-900 mb-1">Advanced</h3>
+            <p class="text-sm text-slate-500">For scaling companies</p>
+          </div>
+          <div class="mb-6">
+            <div class="price-monthly flex items-baseline gap-1">
+              <span class="text-4xl font-bold text-slate-900">\$120</span>
+              <span class="text-slate-500">/month</span>
+            </div>
+            <div class="price-annual flex items-baseline gap-1 hidden">
+              <span class="text-4xl font-bold text-slate-900">\$96</span>
+              <span class="text-slate-500">/month</span>
+              <span class="ml-2 px-2 py-0.5 text-xs font-semibold text-white bg-qb-500 rounded">Billed \$1,152/yr</span>
+            </div>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1" role="list">
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Everything in Plus</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Batch invoicing & expenses</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Custom workflows & automation</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Dedicated account manager</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Premium support (phone + chat)</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>Training & onboarding sessions</span></li>
+            <li class="flex items-start gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-5 h-5 text-qb-500 flex-shrink-0 mt-0.5"></i><span>25 users + 2 accountants</span></li>
+          </ul>
+          <a href="#signup" class="block w-full px-5 py-3 text-center font-semibold text-qb-600 bg-qb-50 hover:bg-qb-100 rounded-lg transition-colors" data-cta="pricing-advanced">Contact sales</a>
+        </article>
+      </div>
+      
+      <!-- Pricing Note -->
+      <div class="text-center mt-12 animate-fade-in-up stagger-5">
+        <p class="text-sm text-slate-500 max-w-2xl mx-auto">Payroll is available as an add-on for \$20/mo + $4/employee/mo. <a href="#pricing-faq" class="text-qb-600 hover:text-qb-700 font-medium">View full feature comparison →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+  ============================================================ -->
+  <section id="testimonials" class="py-20 lg:py-28 bg-slate-50" aria-labelledby="testimonials-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 animate-fade-in-up">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-qb-700 bg-qb-50 rounded-full mb-4">Customer Stories</span>
+        <h2 id="testimonials-heading" class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Loved by small business owners everywhere</h2>
+        <p class="text-lg text-slate-600">See why millions trust QuickBooks with their finances.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Testimonial 1 -->
+        <article class="bg-white rounded-card-lg p-6 border border-slate-100 hover:shadow-card-hover transition-shadow duration-300 animate-fade-in-up stagger-1">
+          <div class="flex gap-1 mb-4" aria-label="5 out of 5 stars">
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+          </div>
+          <p class="text-slate-700 leading-relaxed mb-6">"QuickBooks cut my bookkeeping time from 10 hours a week to under 2. The bank feed automation alone is worth 10x the price. I actually understand my numbers now."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-qb-400 to-qb-600 flex items-center justify-center text-white font-semibold">MK</div>
+            <div>
+              <p class="font-semibold text-slate-900 text-sm">Maria Kowalski</p>
+              <p class="text-xs text-slate-500">Owner, Kowalski Creative Studio</p>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Testimonial 2 -->
+        <article class="bg-white rounded-card-lg p-6 border border-slate-100 hover:shadow-card-hover transition-shadow duration-300 animate-fade-in-up stagger-2">
+          <div class="flex gap-1 mb-4" aria-label="5 out of 5 stars">
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+          </div>
+          <p class="text-slate-700 leading-relaxed mb-6">"Payroll used to be my nightmare. Now it runs itself — taxes filed, direct deposits sent, W-2s generated. My accountant said my books are the cleanest she's seen in 15 years."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-semibold">JC</div>
+            <div>
+              <p class="font-semibold text-slate-900 text-sm">James Chen</p>
+              <p class="text-xs text-slate-500">Founder, Chen Manufacturing</p>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Testimonial 3 -->
+        <article class="bg-white rounded-card-lg p-6 border border-slate-100 hover:shadow-card-hover transition-shadow duration-300 animate-fade-in-up stagger-3">
+          <div class="flex gap-1 mb-4" aria-label="5 out of 5 stars">
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-yellow-400 text-yellow-400"></i>
+          </div>
+          <p class="text-slate-700 leading-relaxed mb-6">"The mobile app means I can snap a receipt the moment I get it. No more shoeboxes of paper at tax time. AI categorization gets it right 99% of the time. Game changer."</p>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white font-semibold">AR</div>
+            <div>
+              <p class="font-semibold text-slate-900 text-sm">Aisha Rahman</p>
+              <p class="text-xs text-slate-500">Co-founder, GreenLeaf Landscaping</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      
+      <div class="text-center mt-12 animate-fade-in-up stagger-4">
+        <a href="#testimonials" class="text-qb-600 font-semibold text-sm hover:text-qb-700 flex items-center justify-center gap-1.5 inline-flex">
+          Read all 12,000+ reviews <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ SECTION
+  ============================================================ -->
+  <section id="faq" class="py-20 lg:py-28 bg-white" aria-labelledby="faq-heading">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate-fade-in-up">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-qb-700 bg-qb-50 rounded-full mb-4">Frequently Asked Questions</span>
+        <h2 id="faq-heading" class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Got questions? We've got answers.</h2>
+        <p class="text-lg text-slate-600">Can't find what you're looking for? <a href="#support" class="text-qb-600 hover:text-qb-700 font-medium">Contact our support team →</a></p>
+      </div>
+      
+      <div class="space-y-4" id="faq-list">
+        <!-- FAQ 1 -->
+        <details class="group bg-white border border-slate-100 rounded-card overflow-hidden animate-fade-in-up stagger-1" open>
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none focus:outline-none focus:ring-2 focus:ring-qb-200 focus:ring-offset-2">
+            <h3 class="font-semibold text-slate-900 text-lg pr-4">How does the 30-day free trial work?</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 faq-icon flex-shrink-0 transition-transform duration-200"></i>
+          </summary>
+          <div class="faq-content px-6 pb-6 text-slate-600 leading-relaxed">
+            <p>Sign up and get full access to all features for 30 days — no credit card required. At the end of your trial, choose a plan to continue. If you don't subscribe, your data is saved for 12 months in case you return.</p>
+          </div>
+        </details>
+        
+        <!-- FAQ 2 -->
+        <details class="group bg-white border border-slate-100 rounded-card overflow-hidden animate-fade-in-up stagger-2">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none focus:outline-none focus:ring-2 focus:ring-qb-200 focus:ring-offset-2">
+            <h3 class="font-semibold text-slate-900 text-lg pr-4">Can I switch plans later?</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 faq-icon flex-shrink-0 transition-transform duration-200"></i>
+          </summary>
+          <div class="faq-content px-6 pb-6 text-slate-600 leading-relaxed">
+            <p>Yes, you can upgrade or downgrade at any time. Upgrades take effect immediately with prorated billing. Downgrades take effect at the start of your next billing cycle. No penalties or hidden fees.</p>
+          </div>
+        </details>
+        
+        <!-- FAQ 3 -->
+        <details class="group bg-white border border-slate-100 rounded-card overflow-hidden animate-fade-in-up stagger-3">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none focus:outline-none focus:ring-2 focus:ring-qb-200 focus:ring-offset-2">
+            <h3 class="font-semibold text-slate-900 text-lg pr-4">Is my financial data secure?</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 faq-icon flex-shrink-0 transition-transform duration-200"></i>
+          </summary>
+          <div class="faq-content px-6 pb-6 text-slate-600 leading-relaxed">
+            <p>Absolutely. We use 256-bit SSL encryption (bank-level), SOC 2 Type II certification, multi-factor authentication, and automatic backups. Your data never leaves our SOC 2 certified data centers. We're also GDPR and CCPA compliant.</p>
+          </div>
+        </details>
+        
+        <!-- FAQ 4 -->
+        <details class="group bg-white border border-slate-100 rounded-card overflow-hidden animate-fade-in-up stagger-4">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none focus:outline-none focus:ring-2 focus:ring-qb-200 focus:ring-offset-2">
+            <h3 class="font-semibold text-slate-900 text-lg pr-4">What banks can I connect?</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 faq-icon flex-shrink-0 transition-transform duration-200"></i>
+          </summary>
+          <div class="faq-content px-6 pb-6 text-slate-600 leading-relaxed">
+            <p>QuickBooks connects to 11,000+ financial institutions across the US and Canada, including Chase, Bank of America, Wells Fargo, Citi, Capital One, and most regional banks and credit unions. <a href="#bank-list" class="text-qb-600 hover:text-qb-700 font-medium">View the full list →</a></p>
+          </div>
+        </details>
+        
+        <!-- FAQ 5 -->
+        <details class="group bg-white border border-slate-100 rounded-card overflow-hidden animate-fade-in-up stagger-5">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none focus:outline-none focus:ring-2 focus:ring-qb-200 focus:ring-offset-2">
+            <h3 class="font-semibold text-slate-900 text-lg pr-4">Do you offer phone support?</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 faq-icon flex-shrink-0 transition-transform duration-200"></i>
+          </summary>
+          <div class="faq-content px-6 pb-6 text-slate-600 leading-relaxed">
+            <p>Phone support is included with Plus and Advanced plans. Essentials and Simple Start get 24/7 chat and email support with typical response times under 5 minutes. All plans include access to our help center, video tutorials, and community forum.</p>
+          </div>
+        </details>
+        
+        <!-- FAQ 6 -->
+        <details class="group bg-white border border-slate-100 rounded-card overflow-hidden animate-fade-in-up stagger-6">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none focus:outline-none focus:ring-2 focus:ring-qb-200 focus:ring-offset-2">
+            <h3 class="font-semibold text-slate-900 text-lg pr-4">Can my accountant access my books?</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 faq-icon flex-shrink-0 transition-transform duration-200"></i>
+          </summary>
+          <div class="faq-content px-6 pb-6 text-slate-600 leading-relaxed">
+            <p>Yes! Every plan includes free accountant access. Invite your accountant or bookkeeper with their own login — they get a dedicated portal with client dashboard, batch transaction review, and tax-ready reports. No extra cost.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BANNER
+  ============================================================ -->
+  <section class="py-16 lg:py-20 bg-qb-900 relative overflow-hidden" aria-labelledby="cta-heading">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.02%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]" aria-hidden="true"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+      <h2 id="cta-heading" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 animate-fade-in-up">Ready to simplify your finances?</h2>
+      <p class="text-lg sm:text-xl text-qb-100 max-w-2xl mx-auto mb-8 animate-fade-in-up stagger-1">Join 7 million businesses saving 15+ hours a month. Start your free trial today — no credit card required.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up stagger-2">
+        <a href="#signup" class="px-8 py-3.5 text-base font-semibold text-qb-600 bg-white hover:bg-qb-50 rounded-lg transition-all shadow-sm hover:shadow-lg w-full sm:w-auto" data-cta="banner-primary">
+          Start free trial
+        </a>
+        <a href="#demo" class="px-8 py-3.5 text-base font-semibold text-white border border-qb-400 hover:bg-qb-800 rounded-lg transition-all w-full sm:w-auto" data-cta="banner-secondary">
+          Watch 3-min demo
+        </a>
+      </div>
+      <p class="mt-6 text-sm text-qb-200 animate-fade-in-up stagger-3">No credit card • Cancel anytime • 30-day free trial • SOC 2 certified</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SIGNUP FORM (Modal/Section)
+  ============================================================ -->
+  <section id="signup" class="py-20 lg:py-28 bg-white" aria-labelledby="signup-heading">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-card-lg p-8 sm:p-10 border border-slate-100 shadow-card">
+        <div class="text-center mb-8 animate-fade-in-up">
+          <span class="inline-block px-3 py-1 text-sm font-medium text-qb-700 bg-qb-50 rounded-full mb-4">Create your account</span>
+          <h2 id="signup-heading" class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Start your 30-day free trial</h2>
+          <p class="text-slate-600">No credit card required. Full access to all features.</p>
+        </div>
+        
+        <form id="signup-form" class="space-y-5 animate-fade-in-up stagger-1" novalidate>
+          <div>
+            <label for="full-name" class="block text-sm font-medium text-slate-700 mb-1.5">Full name</label>
+            <input type="text" id="full-name" name="fullName" required autocomplete="name"
+              class="w-full px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-qb-200 focus:border-qb-500 transition-all text-base placeholder:text-slate-400"
+              placeholder="Alex Johnson">
+            <p class="error-message" id="name-error"><i data-lucide="alert-circle" class="w-4 h-4"></i>Please enter your full name</p>
+          </div>
+          
+          <div>
+            <label for="email" class="block text-sm font-medium text-slate-700 mb-1.5">Work email</label>
+            <input type="email" id="email" name="email" required autocomplete="email"
+              class="w-full px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-qb-200 focus:border-qb-500 transition-all text-base placeholder:text-slate-400"
+              placeholder="alex@company.com">
+            <p class="error-message" id="email-error"><i data-lucide="alert-circle" class="w-4 h-4"></i>Please enter a valid work email</p>
+          </div>
+          
+          <div>
+            <label for="password" class="block text-sm font-medium text-slate-700 mb-1.5">Password</label>
+            <div class="relative">
+              <input type="password" id="password" name="password" required autocomplete="new-password" minlength="8"
+                class="w-full px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-qb-200 focus:border-qb-500 transition-all text-base placeholder:text-slate-400 pr-12"
+                placeholder="••••••••">
+              <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600" aria-label="Toggle password visibility" data-toggle-password>
+                <i data-lucide="eye" class="w-5 h-5" aria-hidden="true"></i>
+              </button>
+            </div>
+            <p class="error-message" id="password-error"><i data-lucide="alert-circle" class="w-4 h-4"></i>Password must be at least 8 characters</p>
+            <div class="mt-2 h-1 bg-slate-200 rounded-full overflow-hidden" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Password strength">
+              <div id="password-strength" class="h-full bg-slate-300 rounded-full transition-all duration-300" style="width: 0%"></div>
+            </div>
+            <p id="password-hint" class="text-xs text-slate-500 mt-1">At least 8 characters</p>
+          </div>
+          
+          <div>
+            <label for="company" class="block text-sm font-medium text-slate-700 mb-1.5">Company name (optional)</label>
+            <input type="text" id="company" name="company" autocomplete="organization"
+              class="w-full px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-qb-200 focus:border-qb-500 transition-all text-base placeholder:text-slate-400"
+              placeholder="Acme Corporation">
+          </div>
+          
+          <div>
+            <label class="flex items-start gap-3 cursor-pointer">
+              <input type="checkbox" id="terms" name="terms" required
+                class="mt-1 w-4 h-4 text-qb-500 border-slate-300 rounded focus:ring-qb-200 focus:ring-2 accent-qb-500">
+              <span class="text-sm text-slate-600">I agree to the <a href="#terms" class="text-qb-600 hover:text-qb-700 font-medium underline">Terms of Service</a> and <a href="#privacy" class="text-qb-600 hover:text-qb-700 font-medium underline">Privacy Policy</a>.</span>
+            </label>
+            <p class="error-message" id="terms-error"><i data-lucide="alert-circle" class="w-4 h-4"></i>You must agree to the terms</p>
+          </div>
+          
+          <button type="submit" class="w-full py-3.5 px-6 text-base font-semibold text-white bg-qb-500 hover:bg-qb-600 rounded-lg transition-all shadow-sm hover:shadow-lg focus:ring-4 focus:ring-qb-100 disabled:opacity-50 disabled:cursor-not-allowed" id="submit-btn">
+            <span class="flex items-center justify-center gap-2">
+              <span>Create my free account</span>
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </span>
+          </button>
+        </form>
+        
+        <p class="text-center text-sm text-slate-500 mt-6 animate-fade-in-up stagger-2">
+          Already have an account? <a href="#login" class="text-qb-600 hover:text-qb-700 font-medium">Sign in</a>
+        </p>
+        
+        <div class="mt-6 pt-6 border-t border-slate-100 animate-fade-in-up stagger-3">
+          <p class="text-center text-xs text-slate-500">
+            <i data-lucide="shield" class="w-3.5 h-3.5 inline-block text-qb-500 mr-1"></i>
+            Protected by 256-bit encryption • SOC 2 Type II certified • GDPR compliant
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="contact" class="bg-slate-950 text-slate-300 pt-16 pb-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+        <!-- Brand Column -->
+        <div class="lg:col-span-2 xl:col-span-1">
+          <a href="#" class="flex items-center gap-2 text-white font-bold text-xl mb-6" aria-label="QuickBooks Home">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" class="text-qb-400">
+              <rect width="32" height="32" rx="8" fill="currentColor"/>
+              <path d="M8 12h16M8 16h12M8 20h8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <span>QuickBooks</span>
+          </a>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6 max-w-xs">Smart accounting software that automates the busywork so you can focus on growing your business.</p>
+          
+          <!-- Contact Details -->
+          <div class="space-y-3 text-sm text-slate-400 border-t border-slate-800 pt-6">
+            <div class="flex items-center gap-3">
+              <i data-lucide="phone" class="w-5 h-5 text-qb-400 flex-shrink-0"></i>
+              <a href="tel:+16152885665" class="hover:text-white transition-colors">+1 615-288-5665</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="mail" class="w-5 h-5 text-qb-400 flex-shrink-0"></i>
+              <a href="mailto:admin@chat-intuit.com" class="hover:text-white transition-colors">admin@chat-intuit.com</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="message-square" class="w-5 h-5 text-qb-400 flex-shrink-0"></i>
+              <a href="https://chat-intuit.com" target="_blank" rel="noopener" class="hover:text-white transition-colors">Live Chat Support</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-qb-400 flex-shrink-0"></i>
+              <address class="not-italic">California, USA</address>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product Links -->
+        <nav aria-label="Product links">
+          <h3 class="font-semibold text-white mb-4">Product</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#features" class="text-slate-400 hover:text-white transition-colors">Features</a></li>
+            <li><a href="#pricing" class="text-slate-400 hover:text-white transition-colors">Pricing</a></li>
+            <li><a href="#screenshots" class="text-slate-400 hover:text-white transition-colors">Product Tour</a></li>
+            <li><a href="#integrations" class="text-slate-400 hover:text-white transition-colors">Integrations</a></li>
+            <li><a href="#api" class="text-slate-400 hover:text-white transition-colors">API Docs</a></li>
+            <li><a href="#changelog" class="text-slate-400 hover:text-white transition-colors">Changelog</a></li>
+            <li><a href="#roadmap" class="text-slate-400 hover:text-white transition-colors">Roadmap</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Company Links -->
+        <nav aria-label="Company links">
+          <h3 class="font-semibold text-white mb-4">Company</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#about" class="text-slate-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#careers" class="text-slate-400 hover:text-white transition-colors">Careers</a></li>
+            <li><a href="#press" class="text-slate-400 hover:text-white transition-colors">Press Kit</a></li>
+            <li><a href="#blog" class="text-slate-400 hover:text-white transition-colors">Blog</a></li>
+            <li><a href="#partners" class="text-slate-400 hover:text-white transition-colors">Partners</a></li>
+            <li><a href="#investors" class="text-slate-400 hover:text-white transition-colors">Investors</a></li>
+            <li><a href="#contact" class="text-slate-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Resources Links -->
+        <nav id="resources" aria-label="Resources links">
+          <h3 class="font-semibold text-white mb-4">Resources</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#help-center" class="text-slate-400 hover:text-white transition-colors">Help Center</a></li>
+            <li><a href="#community" class="text-slate-400 hover:text-white transition-colors">Community Forum</a></li>
+            <li><a href="#webinars" class="text-slate-400 hover:text-white transition-colors">Webinars</a></li>
+            <li><a href="#guides" class="text-slate-400 hover:text-white transition-colors">Guides & Tutorials</a></li>
+            <li><a href="#accountants" class="text-slate-400 hover:text-white transition-colors">For Accountants</a></li>
+            <li><a href="#developers" class="text-slate-400 hover:text-white transition-colors">For Developers</a></li>
+            <li><a href="#status" class="text-slate-400 hover:text-white transition-colors">System Status</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Legal Links -->
+        <nav aria-label="Legal links">
+          <h3 class="font-semibold text-white mb-4">Legal</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#privacy" class="text-slate-400 hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#terms" class="text-slate-400 hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#cookies" class="text-slate-400 hover:text-white transition-colors">Cookie Policy</a></li>
+            <li><a href="#security" class="text-slate-400 hover:text-white transition-colors">Security</a></li>
+            <li><a href="#accessibility" class="text-slate-400 hover:text-white transition-colors">Accessibility</a></li>
+            <li><a href="#gdpr" class="text-slate-400 hover:text-white transition-colors">GDPR</a></li>
+            <li><a href="#ccpa" class="text-slate-400 hover:text-white transition-colors">CCPA</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <!-- Social & Newsletter -->
+      <div class="border-t border-slate-800 pt-8">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-6 mb-8">
+          <!-- Newsletter -->
+          <div class="w-full lg:w-80">
+            <h3 class="font-semibold text-white mb-3">Stay updated</h3>
+            <form id="newsletter-form" class="flex gap-2" aria-label="Newsletter signup">
+              <input type="email" name="email" placeholder="Enter your email" required autocomplete="email"
+                class="flex-1 px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-qb-500 focus:border-qb-500 text-sm">
+              <button type="submit" class="px-4 py-2.5 bg-qb-500 hover:bg-qb-400 text-white font-medium text-sm rounded-lg transition-colors whitespace-nowrap" aria-label="Subscribe">
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </form>
+            <p class="text-xs text-slate-500 mt-2">We respect your inbox. Unsubscribe anytime.</p>
+          </div>
+          
+          <!-- Social Icons -->
+          <div class="flex items-center gap-6">
+            <span class="text-sm text-slate-500 hidden sm:block">Follow us:</span>
+            <div class="flex items-center gap-3">
+              <a href="#twitter" class="text-slate-400 hover:text-qb-400 transition-colors" aria-label="Twitter/X"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+              <a href="#linkedin" class="text-slate-400 hover:text-qb-400 transition-colors" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+              <a href="#youtube" class="text-slate-400 hover:text-qb-400 transition-colors" aria-label="YouTube"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+              <a href="#github" class="text-slate-400 hover:text-qb-400 transition-colors" aria-label="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+          <p>&copy; 2024 QuickBooks, Inc. All rights reserved.</p>
+          <div class="flex items-center gap-6">
+            <a href="#privacy" class="hover:text-white transition-colors">Privacy</a>
+            <a href="#terms" class="hover:text-white transition-colors">Terms</a>
+            <a href="#cookies" class="hover:text-white transition-colors">Cookies</a>
+            <a href="#security" class="hover:text-white transition-colors">Security</a>
+            <span class="text-slate-600">Made with care for small businesses</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // ============================================================
+    // MOBILE NAVIGATION
+    // ============================================================
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileOverlay = document.getElementById('mobile-overlay');
+    const navbar = document.getElementById('navbar');
+    
+    function openMobileNav() {
+      mobileNav.classList.add('active');
+      mobileOverlay.classList.remove('opacity-0', 'invisible');
+      mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMobileNav() {
+      mobileNav.classList.remove('active');
+      mobileOverlay.classList.add('opacity-0', 'invisible');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    
+    mobileMenuBtn.addEventListener('click', openMobileNav);
+    mobileMenuClose.addEventListener('click', closeMobileNav);
+    mobileOverlay.addEventListener('click', closeMobileNav);
+    
+    // Close mobile nav on link click
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMobileNav);
+    });
+    
+    // ============================================================
+    // SMOOTH SCROLL FOR ANCHOR LINKS
+    // ============================================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          const navbarHeight = navbar.offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+          
+          // Update URL without scrolling
+          history.pushState(null, '', targetId);
+        }
+      });
+    });
+    
+    // ============================================================
+    // NAVBAR SCROLL EFFECT
+    // ============================================================
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        navbar.classList.add('shadow-sm', 'bg-white/98');
+      } else {
+        navbar.classList.remove('shadow-sm', 'bg-white/98');
+      }
+      
+      lastScroll = currentScroll;
+    }, { passive: true });
+    
+    // ============================================================
+    // PRICING TOGGLE
+    // ============================================================
+    const pricingToggle = document.getElementById('pricing-toggle');
+    const pricingCards = document.getElementById('pricing-cards');
+    
+    pricingToggle.addEventListener('change', () => {
+      const isAnnual = pricingToggle.checked;
+      pricingCards.classList.toggle('pricing-annual', isAnnual);
+      pricingCards.classList.toggle('pricing-monthly', !isAnnual);
+      
+      // Update all price displays
+      document.querySelectorAll('.pricing-card').forEach(card => {
+        const monthly = card.querySelector('.price-monthly');
+        const annual = card.querySelector('.price-annual');
+        if (isAnnual) {
+          monthly.classList.add('hidden');
+          annual.classList.remove('hidden');
+        } else {
+          monthly.classList.remove('hidden');
+          annual.classList.add('hidden');
+        }
+      });
+    });
+    
+    // ============================================================
+    // SCREENSHOT TABS
+    // ============================================================
+    const tabButtons = document.querySelectorAll('.screenshot-tab');
+    const tabPanels = document.querySelectorAll('.screenshot-panel');
+    
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+        
+        // Update buttons
+        tabButtons.forEach(btn => {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-selected', 'false');
+        });
+        button.classList.add('active');
+        button.setAttribute('aria-selected', 'true');
+        
+        // Update panels
+        tabPanels.forEach(panel => {
+          if (panel.id === `panel-${tab}`) {
+            panel.classList.remove('hidden');
+            panel.hidden = false;
+          } else {
+            panel.classList.add('hidden');
+            panel.hidden = true;
+          }
+        });
+      });
+    });
+    
+    // ============================================================
+    // FAQ ACCORDION
+    // ============================================================
+    const faqDetails = document.querySelectorAll('#faq-list details');
+    
+    faqDetails.forEach(detail => {
+      const summary = detail.querySelector('summary');
+      const content = detail.querySelector('.faq-content');
+      const icon = detail.querySelector('.faq-icon');
+      
+      // Initial state
+      if (detail.open) {
+        content.classList.add('open');
+        icon.classList.add('open');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+      
+      summary.addEventListener('click', (e) => {
+        // Prevent default to handle animation
+        e.preventDefault();
+        
+        const isOpen = detail.open;
+        
+        if (isOpen) {
+          // Closing
+          content.style.maxHeight = content.scrollHeight + 'px';
+          requestAnimationFrame(() => {
+            content.classList.remove('open');
+            icon.classList.remove('open');
+            content.style.maxHeight = '0';
+          });
+          
+          // Wait for animation then close
+          setTimeout(() => {
+            detail.open = false;
+          }, 300);
+        } else {
+          // Opening
+          detail.open = true;
+          content.style.maxHeight = content.scrollHeight + 'px';
+          requestAnimationFrame(() => {
+            content.classList.add('open');
+            icon.classList.add('open');
+          });
+          
+          // Remove max-height after animation for dynamic content
+          setTimeout(() => {
+            content.style.maxHeight = '500px';
+          }, 300);
+        }
+      });
+    });
+    
+    // ============================================================
+    // SIGNUP FORM VALIDATION
+    // ============================================================
+    const signupForm = document.getElementById('signup-form');
+    const submitBtn = document.getElementById('submit-btn');
+    
+    // Password strength meter
+    const passwordInput = document.getElementById('password');
+    const strengthBar = document.getElementById('password-strength');
+    const passwordHint = document.getElementById('password-hint');
+    
+    function calculateStrength(password) {
+      let strength = 0;
+      if (password.length >= 8) strength += 25;
+      if (password.length >= 12) strength += 15;
+      if (/[A-Z]/.test(password)) strength += 20;
+      if (/[a-z]/.test(password)) strength += 10;
+      if (/[0-9]/.test(password)) strength += 15;
+      if (/[^A-Za-z0-9]/.test(password)) strength += 15;
+      return Math.min(strength, 100);
+    }
+    
+    function getStrengthLabel(strength) {
+      if (strength < 30) return 'Weak';
+      if (strength < 60) return 'Fair';
+      if (strength < 80) return 'Good';
+      return 'Strong';
+    }
+    
+    function getStrengthColor(strength) {
+      if (strength < 30) return 'bg-red-500';
+      if (strength < 60) return 'bg-yellow-500';
+      if (strength < 80) return 'bg-blue-500';
+      return 'bg-qb-500';
+    }
+    
+    passwordInput.addEventListener('input', () => {
+      const password = passwordInput.value;
+      const strength = calculateStrength(password);
+      
+      strengthBar.style.width = strength + '%';
+      strengthBar.className = 'h-full rounded-full transition-all duration-300 ' + getStrengthColor(strength);
+      
+      if (password.length === 0) {
+        passwordHint.textContent = 'At least 8 characters';
+        passwordHint.className = 'text-xs text-slate-500 mt-1';
+      } else {
+        passwordHint.textContent = `Strength: ${getStrengthLabel(strength)}`;
+        passwordHint.className = `text-xs mt-1 ${strength < 60 ? 'text-yellow-600' : strength < 80 ? 'text-blue-600' : 'text-qb-600'}`;
+      }
+    });
+    
+    // Toggle password visibility
+    document.querySelector('[data-toggle-password]').addEventListener('click', function() {
+      const input = document.getElementById('password');
+      const icon = this.querySelector('i');
+      const isPassword = input.type === 'password';
+      
+      input.type = isPassword ? 'text' : 'password';
+      icon.dataset.lucide = isPassword ? 'eye-off' : 'eye';
+      lucide.createIcons();
+    });
+    
+    // Validation helpers
+    function showError(inputId, errorId) {
+      const input = document.getElementById(inputId);
+      const error = document.getElementById(errorId);
+      input.classList.add('input-error');
+      input.classList.remove('input-success');
+      error.classList.add('visible');
+    }
+    
+    function clearError(inputId, errorId) {
+      const input = document.getElementById(inputId);
+      const error = document.getElementById(errorId);
+      input.classList.remove('input-error');
+      if (input.value) input.classList.add('input-success');
+      error.classList.remove('visible');
+    }
+    
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+    
+    function validateField(inputId, errorId, validator) {
+      const input = document.getElementById(inputId);
+      const value = input.value.trim();
+      
+      if (validator(value)) {
+        clearError(inputId, errorId);
+        return true;
+      } else {
+        showError(inputId, errorId);
+        return false;
+      }
+    }
+    
+    // Real-time validation
+    document.getElementById('full-name').addEventListener('blur', () => {
+      validateField('full-name', 'name-error', v => v.length >= 2);
+    });
+    
+    document.getElementById('email').addEventListener('blur', () => {
+      validateField('email', 'email-error', validateEmail);
+    });
+    
+    document.getElementById('password').addEventListener('blur', () => {
+      validateField('password', 'password-error', v => v.length >= 8);
+    });
+    
+    document.getElementById('terms').addEventListener('change', () => {
+      const checkbox = document.getElementById('terms');
+      const error = document.getElementById('terms-error');
+      if (checkbox.checked) {
+        error.classList.remove('visible');
+      }
+    });
+    
+    // Form submission
+    signupForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Validate all fields
+      const isNameValid = validateField('full-name', 'name-error', v => v.length >= 2);
+      const isEmailValid = validateField('email', 'email-error', validateEmail);
+      const isPasswordValid = validateField('password', 'password-error', v => v.length >= 8);
+      const isTermsValid = document.getElementById('terms').checked;
+      
+      if (!isTermsValid) {
+        document.getElementById('terms-error').classList.add('visible');
+      }
+      
+      if (isNameValid && isEmailValid && isPasswordValid && isTermsValid) {
+        // Simulate submission
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+          <span class="flex items-center justify-center gap-2">
+            <svg class="animate-spin h-5 w-5" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/></svg>
+            Creating account...
+          </span>
+        `;
+        
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        
+        // Success state
+        submitBtn.classList.remove('bg-qb-500', 'hover:bg-qb-600');
+        submitBtn.classList.add('bg-qb-500');
+        submitBtn.innerHTML = `
+          <span class="flex items-center justify-center gap-2">
+            <i data-lucide="check" class="w-5 h-5"></i>
+            Account created! Redirecting...
+          </span>
+        `;
+        lucide.createIcons();
+        
+        // In a real app, redirect here
+        setTimeout(() => {
+          alert('Account created successfully! (Demo - no actual submission)');
+          signupForm.reset();
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('bg-qb-500');
+          submitBtn.classList.add('bg-qb-500', 'hover:bg-qb-600');
+          submitBtn.innerHTML = `
+            <span class="flex items-center justify-center gap-2">
+              <span>Create my free account</span>
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </span>
+          `;
+          lucide.createIcons();
+          document.querySelectorAll('.input-success').forEach(el => el.classList.remove('input-success'));
+        }, 1500);
+      }
+    });
+    
+    // ============================================================
+    // NEWSLETTER FORM
+    // ============================================================
+    document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = e.target.querySelector('input');
+      const email = input.value.trim();
+      
+      if (validateEmail(email)) {
+        const btn = e.target.querySelector('button');
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = '<i data-lucide="check" class="w-4 h-4"></i>';
+        btn.classList.remove('bg-qb-500', 'hover:bg-qb-400');
+        btn.classList.add('bg-qb-500');
+        lucide.createIcons();
+        
+        setTimeout(() => {
+          btn.innerHTML = originalHTML;
+          btn.classList.add('bg-qb-500', 'hover:bg-qb-400');
+          lucide.createIcons();
+          input.value = '';
+        }, 2000);
+      }
+    });
+    
+    // ============================================================
+    // INTERSECTION OBSERVER FOR SCROLL ANIMATIONS
+    // ============================================================
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -10% 0px',
+      threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in-up');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    // Observe elements that should animate on scroll
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+    
+    // Add animate-on-scroll class to sections
+    document.querySelectorAll('section').forEach((section, i) => {
+      if (section.id && !['home', 'signup'].includes(section.id)) {
+        section.classList.add('animate-on-scroll');
+        if (i < 3) section.classList.remove('animate-on-scroll'); // First sections already animated
+      }
+    });
+    
+    // ============================================================
+    // CTA TRACKING (Demo)
+    // ============================================================
+    document.querySelectorAll('[data-cta]').forEach(cta => {
+      cta.addEventListener('click', () => {
+        console.log('CTA clicked:', cta.dataset.cta);
+        // In production: analytics.track('cta_click', { location: cta.dataset.cta });
+      });
+    });
+    
+    console.log('QuickBooks website loaded successfully! 🚀');
+  </script>
+
+  <!-- Tawk.to Support Chat -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function(){
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6a7a87a80ef5611d48e8fbd8/default';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!-- End Tawk.to Support Chat -->
 </body>
 </html>
